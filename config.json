@@ -72,6 +72,20 @@
           "type": "python"
         }
       ]
+    },
+    {
+      "id": "api-data-explorer",
+      "title": "API Data Explorer",
+      "description": "Fetch public JSON data and explore it through searchable, filterable FastAPI endpoints",
+      "path": "assignments/api-data-explorer",
+      "dueDate": "2026-10-15",
+      "attachments": [
+        {
+          "name": "Starter Code",
+          "file": "starter-code.py",
+          "type": "python"
+        }
+      ]
     }
   ]
 }
