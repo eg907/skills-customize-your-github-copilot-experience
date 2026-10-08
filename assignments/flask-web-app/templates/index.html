@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Task Board</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 2rem;
+        background: #f4f7fb;
+        color: #1f2937;
+      }
+      h1 {
+        color: #0f172a;
+      }
+      form {
+        margin-bottom: 1.5rem;
+      }
+      input {
+        padding: 0.5rem;
+        font-size: 1rem;
+      }
+      button {
+        padding: 0.5rem 1rem;
+        background: #2563eb;
+        color: white;
+        border: none;
+        border-radius: 6px;
+      }
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+      li {
+        background: white;
+        border: 1px solid #dbe3ee;
+        border-radius: 8px;
+        padding: 0.75rem 1rem;
+        margin-bottom: 0.5rem;
+      }
+      .done {
+        text-decoration: line-through;
+        color: #6b7280;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Student Task Board</h1>
+
+    <form action="/tasks" method="post">
+      <label for="title">New task:</label>
+      <input id="title" name="title" type="text" placeholder="Write a task" />
+      <button type="submit">Add Task</button>
+    </form>
+
+    <ul>
+      {% for task in tasks %}
+      <li class="{% if task.done %}done{% endif %}">
+        {{ task.title }}
+        {% if task.done %} (Done) {% else %} (Not Done) {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

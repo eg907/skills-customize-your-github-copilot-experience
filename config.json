@@ -86,6 +86,20 @@
           "type": "python"
         }
       ]
+    },
+    {
+      "id": "flask-web-app",
+      "title": "Web App Development with Flask and HTML",
+      "description": "Build a small Flask web app that connects Python logic to an HTML interface and user input",
+      "path": "assignments/flask-web-app",
+      "dueDate": "2026-10-30",
+      "attachments": [
+        {
+          "name": "Starter Code",
+          "file": "starter-code.py",
+          "type": "python"
+        }
+      ]
     }
   ]
 }
